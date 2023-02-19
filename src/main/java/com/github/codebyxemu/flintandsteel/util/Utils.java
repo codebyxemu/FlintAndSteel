@@ -1,4 +1,4 @@
-package com.github.codebyxemu.flintandsteel;
+package com.github.codebyxemu.flintandsteel.util;
 
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;

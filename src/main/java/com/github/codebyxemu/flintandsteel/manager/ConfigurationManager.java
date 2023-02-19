@@ -1,4 +1,6 @@
-package com.github.codebyxemu.flintandsteel;
+package com.github.codebyxemu.flintandsteel.manager;
+
+import com.github.codebyxemu.flintandsteel.FasPlugin;
 
 public class ConfigurationManager {
 

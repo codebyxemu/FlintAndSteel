@@ -6,7 +6,7 @@
 
     <groupId>me.xemu</groupId>
     <artifactId>FlintAndSteel</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>FlintAndSteel</name>
@@ -45,6 +45,8 @@
                                     <pattern>de.leonhard.storage</pattern>
                                     <shadedPattern>com.github.codebyxemu.shade.storage</shadedPattern>
                                 </relocation>
+                                <pattern>org.bstats</pattern>
+                                <shadedPattern>com.github.codebyxemu.shade.metrics</shadedPattern>
                             </relocations>
                         </configuration>
                     </execution>
@@ -91,6 +93,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.26</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
