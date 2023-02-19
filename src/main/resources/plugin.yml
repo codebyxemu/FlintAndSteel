@@ -1,0 +1,5 @@
+name: FlintAndSteel
+version: '${project.version}'
+main: com.github.codebyxemu.flintandsteel.FasPlugin
+authors: [ Xemu ]
+description: A improved flint and steel 
