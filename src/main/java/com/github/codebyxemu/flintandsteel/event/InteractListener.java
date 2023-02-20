@@ -1,6 +1,7 @@
 package com.github.codebyxemu.flintandsteel.event;
 
 import com.github.codebyxemu.flintandsteel.FasPlugin;
+import com.github.codebyxemu.flintandsteel.model.Tier;
 import com.github.codebyxemu.flintandsteel.util.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -21,8 +22,9 @@ public class InteractListener implements Listener {
 		ItemStack stack = player.getInventory().getItemInMainHand();
 
 		if (event.getAction() == Action.RIGHT_CLICK_BLOCK && stack.getType() == Material.FLINT_AND_STEEL) {
-			boolean chance = Utils.chance(plugin.getConfigManager().getChance());
-			int durabilityReducePercent = plugin.getConfigManager().getReduceDurability();
+			Tier usedTier = plugin.getTierManager().getTier(tier -> tier.getDisplay().equalsIgnoreCase(stack.getItemMeta().getDisplayName())).stream().findAny().get();
+			boolean chance = Utils.chance(usedTier.getChance());
+			int durabilityReducePercent = usedTier.getDurabilityReduce();
 
 			Bukkit.getLogger().info(Boolean.toString(chance));
 
@@ -35,11 +37,6 @@ public class InteractListener implements Listener {
 				event.setCancelled(true);
 			}
 		}
-
-
-
-
-
 	}
 
 }

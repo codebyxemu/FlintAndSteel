@@ -16,6 +16,10 @@ public class ConfigurationManager {
 				"&cCould not light a fire... Too much wind!",
 				"&cCould not light a fire, try again with more power."
 		});
+
+		plugin.getTiersFile().setDefault("Tiers.0.Display", "&aBasic Flint and Steel");
+		plugin.getTiersFile().setDefault("Tiers.1.Chance", 40); // Percent
+		plugin.getTiersFile().setDefault("Tiers.1.DurabilityReduce", 20); // Percent
 	}
 
 	public int getChance() {

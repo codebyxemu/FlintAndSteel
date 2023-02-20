@@ -45,8 +45,10 @@
                                     <pattern>de.leonhard.storage</pattern>
                                     <shadedPattern>com.github.codebyxemu.shade.storage</shadedPattern>
                                 </relocation>
-                                <pattern>org.bstats</pattern>
-                                <shadedPattern>com.github.codebyxemu.shade.metrics</shadedPattern>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>com.github.codebyxemu.shade.metrics</shadedPattern>
+                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
